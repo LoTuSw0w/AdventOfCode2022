@@ -14,10 +14,8 @@ public class Solutions
 
         var result = elvesData
             .Split("\n\n") /*Now we have a list of string, each string in the list contains the calories that an elf carries*/
-            .Select(stringWithNewLineChar =>
-                stringWithNewLineChar
-                    .Split("\n")) /*Turn the string represent the total calories of each elf into a list by spliting based on the new line character*/
-            .Select(arrayOfCalories => arrayOfCalories.Select(calory => Convert.ToInt32(calory)).Sum())
+            .Select(stringWithNewLineChar => stringWithNewLineChar .Split("\n")) /*Turn the string represent the total calories of each elf into a list by spliting based on the new line character*/
+            .Select(arrayOfCalories => arrayOfCalories.Select(singleCalories => Convert.ToInt32(singleCalories)).Sum()) /*Convert each calories string into an integer, then get the sum of the list*/
             .OrderByDescending(values => values)
             .First();
 
