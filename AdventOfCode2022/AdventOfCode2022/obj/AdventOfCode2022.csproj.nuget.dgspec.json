@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\GitKraken\\AdventOfCode2022\\AdventOfCode2022\\AdventOfCode2022\\AdventOfCode2022.csproj": {}
+    "C:\\GitRepos\\AdventOfCode2022\\AdventOfCode2022\\AdventOfCode2022\\AdventOfCode2022.csproj": {}
   },
   "projects": {
-    "C:\\GitKraken\\AdventOfCode2022\\AdventOfCode2022\\AdventOfCode2022\\AdventOfCode2022.csproj": {
+    "C:\\GitRepos\\AdventOfCode2022\\AdventOfCode2022\\AdventOfCode2022\\AdventOfCode2022.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\GitKraken\\AdventOfCode2022\\AdventOfCode2022\\AdventOfCode2022\\AdventOfCode2022.csproj",
+        "projectUniqueName": "C:\\GitRepos\\AdventOfCode2022\\AdventOfCode2022\\AdventOfCode2022\\AdventOfCode2022.csproj",
         "projectName": "AdventOfCode2022",
-        "projectPath": "C:\\GitKraken\\AdventOfCode2022\\AdventOfCode2022\\AdventOfCode2022\\AdventOfCode2022.csproj",
-        "packagesPath": "C:\\Users\\dung2\\.nuget\\packages\\",
-        "outputPath": "C:\\GitKraken\\AdventOfCode2022\\AdventOfCode2022\\AdventOfCode2022\\obj\\",
+        "projectPath": "C:\\GitRepos\\AdventOfCode2022\\AdventOfCode2022\\AdventOfCode2022\\AdventOfCode2022.csproj",
+        "packagesPath": "C:\\Users\\dung.luong\\.nuget\\packages\\",
+        "outputPath": "C:\\GitRepos\\AdventOfCode2022\\AdventOfCode2022\\AdventOfCode2022\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\dung2\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\dung.luong\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -55,7 +55,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.401\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.400\\RuntimeIdentifierGraph.json"
         }
       }
     }

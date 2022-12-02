@@ -1,4 +1,5 @@
-﻿using System.Runtime.InteropServices;
+﻿using System.Collections;
+using System.Runtime.InteropServices;
 
 namespace AdventOfCode2022;
 
@@ -19,6 +20,26 @@ public class Solutions
             .OrderByDescending(values => values)
             .First();
 
+        return result;
+    }
+
+    public static int Day2(string filePath)
+    {
+        Hashtable RPSMapping = new Hashtable();
+        RPSMapping.Add("B X", 1);
+        RPSMapping.Add("C Y", 2);
+        RPSMapping.Add("A Z", 3);
+        RPSMapping.Add("A X", 4);
+        RPSMapping.Add("B Y", 5);
+        RPSMapping.Add("C Z", 6);
+        RPSMapping.Add("C X", 7);
+        RPSMapping.Add("A Y", 8);
+        RPSMapping.Add("B Z", 9);
+
+        var elvesData = File.ReadAllText(filePath);
+        var result = elvesData.Split("\n")
+        .Select(data => RPSMapping[data])
+        .Sum(x => Convert.ToInt32(x));
         return result;
     }
 
