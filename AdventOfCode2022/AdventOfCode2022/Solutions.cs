@@ -1,5 +1,6 @@
 ﻿using System.Collections;
 using System.Runtime.InteropServices;
+using Microsoft.VisualBasic.CompilerServices;
 
 namespace AdventOfCode2022;
 
@@ -66,5 +67,54 @@ public class Solutions
         return result;
     }
 
-    
+    /*=========================== Day 3 ===========================*/
+    public static char GetMatchingChar(string a, string b)
+    {
+        char toReturn = ' ';
+        foreach (char c in a)
+        {
+            if (b.Contains(c))
+            {
+                toReturn = c;
+            }
+        }
+
+        return toReturn;
+    }
+
+    public static int CalculatePriority(char a)
+    {
+        if (Char.IsUpper(a))
+        {
+            return a - 'A' + 27;
+        }
+        else
+        {
+            return a - 'a' + 1;
+        }
+    }
+
+    public static int Day3_part1(string filePath)
+    {
+        var elvesData = File.ReadAllText(filePath)
+            .Split("\n")
+            .Select(s =>
+                Solutions.GetMatchingChar(s.Substring(0, s.Length / 2), s.Substring(s.Length / 2, s.Length / 2)))
+            .Select(s => Solutions.CalculatePriority(s))
+            .Sum();
+
+        return elvesData;
+    }
+
+    public static int Day3_part2(string filePath)
+    {
+        var elvesData = File.ReadAllText(filePath)
+            .Split("\n")
+            .Chunk(3)
+            .Select(s => s[0].Intersect(s[1].Intersect(s[2])).First())
+            .Select(s => Solutions.CalculatePriority(s))
+            .Sum();
+        return elvesData;
+    }
+
 }
